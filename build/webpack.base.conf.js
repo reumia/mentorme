@@ -48,26 +48,6 @@ module.exports = {
         include: [resolve('src'), resolve('test')]
       },
       {
-        test: /\.s[a|c]ss/,
-        use: [{
-          loader: "style-loader"
-        }, {
-          loader: "css-loader"
-        }, {
-          loader: "sass-loader",
-          options: {
-            includePaths: ["absolute/path/a", "absolute/path/b"]
-          }
-        }, {
-          loader: "postcss-loader",
-          options: {
-            plugins: (loader) => {
-              require('autoprefixer')()
-            }
-          }
-        }]
-      },
-      {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
         loader: 'url-loader',
         options: {

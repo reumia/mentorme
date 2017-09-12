@@ -1,0 +1,9 @@
+@mixin transition ($transitions...) {
+  $values: ();
+
+  @each $transition in $transitions {
+    $values: append($values, $transition + ' 0.3s', comma);
+  }
+
+  transition: $values;
+}

@@ -59,7 +59,6 @@ module.exports = {
             includePaths: ["absolute/path/a", "absolute/path/b"]
           }
         }, {
-          l
           loader: "postcss-loader",
           options: {
             plugins: (loader) => {
